@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace ConsoleApp1
+namespace Dungeon
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello World!");
+            CACriatura exploradora = new CExploradora(100, 20, 20);
+            Console.WriteLine("La exploradora ataca con : " + exploradora.Ataque() + " puntos.");
         }
     }
 }
