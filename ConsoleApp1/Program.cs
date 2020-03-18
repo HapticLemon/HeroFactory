@@ -6,8 +6,15 @@ namespace Dungeon
     {
         static void Main(string[] args)
         {
-            CACriatura exploradora = new CExploradora(100, 20, 20);
-            Console.WriteLine("La exploradora ataca con : " + exploradora.Ataque() + " puntos.");
+            CHeroe exploradora = new CHeroe();
+            CAEspada espada = new CEspada();
+
+            Console.WriteLine("Ataque de exploradora con : " + exploradora.Atacar(espada) + " puntos de golpe");
+
+            CADecorator hechizoataque = new CHechizo1(espada);
+            CADecorator hechizoataque1 = new CHechizo1(hechizoataque);
+
+            Console.WriteLine("Ataque de exploradora con : " + exploradora.Atacar(hechizoataque1) + " puntos de golpe");
         }
     }
 }
